@@ -15,7 +15,7 @@ spec:
         app: pi-web-app
     spec:
       containers:
-        - image: kiamol/ch05-pi-app
+        - image: kiamol/ch05-pi
           command: ["donet", "Pi.Web.dll", "-m", "web"]
           name: web
           ports:
@@ -23,8 +23,8 @@ spec:
               name: http
           resources:
             limits:
-              cpu: "32"            
-              memory: "128Gi"
+              cpu: "0.5"            
+              memory: "1Gi"
           readinessProbe:
             tcpSocket:
               port: 8020
